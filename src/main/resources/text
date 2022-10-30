@@ -1,0 +1,6 @@
+toxiproxy_proxy_received_bytes_total{direction="downstream",listener="[::]:3306",proxy="mysql",upstream="mysql:3306"} 15618
+toxiproxy_proxy_received_bytes_total{direction="upstream",listener="[::]:3306",proxy="mysql",upstream="mysql:3306"} 14291
+# HELP toxiproxy_proxy_sent_bytes_total
+# TYPE toxiproxy_proxy_sent_bytes_total counter
+toxiproxy_proxy_sent_bytes_total{direction="downstream",listener="[::]:3306",proxy="mysql",upstream="mysql:3306"} 14916
+toxiproxy_proxy_sent_bytes_total{direction="upstream",listener="[::]:3306",proxy="mysql",upstream="mysql:3306"} 14291

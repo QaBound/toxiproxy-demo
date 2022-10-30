@@ -1,0 +1,9 @@
+[
+  {
+    "name": "mysql",
+    "listen": "[::]:3306",
+    "upstream": "mysql:3306",
+    "enabled": true,
+    "toxics": []
+  }
+]

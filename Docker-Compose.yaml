@@ -1,0 +1,22 @@
+version: '3'
+services:
+  toxiproxy:
+    image: "ghcr.io/shopify/toxiproxy"
+    command:
+      - -host=0.0.0.0
+      - -proxy-metrics
+      - -config=toxiproxyConfig.json
+    volumes:
+      - ./toxiproxyConfig.json:/toxiproxyConfig.json
+    ports:
+      - "8474:8474"
+      - "3306:3306"
+  mysql:
+    image: mysql:5.6
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: 'crud-application'
+    volumes:
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
